@@ -67,7 +67,7 @@
         app:layout_constraintStart_toStartOf="@+id/circleImageView"
         app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
 
-    <com.borjabravo.readmoretextview.ReadMoreTextView
+    <TextView
         android:id="@+id/tvdecripTion"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -77,68 +77,86 @@
         android:lineHeight="18sp"
         android:paddingTop="12dp"
         android:text="TextView"
-        android:ellipsize="none"
+        android:maxLines="4"
         android:textColor="#1A1A1A"
         android:textSize="14sp"
-        app:trimMode="trimModeLength"
-        app:trimLines="4"
-        app:trimCollapsedText="@string/seeless"
-        app:trimExpandedText="@string/seemore"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/circleImageView"
-        app:layout_constraintTop_toBottomOf="@+id/rvListImage"
-        />
+        app:layout_constraintTop_toBottomOf="@+id/rvListImage" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/cardViewComment"
+        android:id="@+id/cardViewComment1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="2dp"
         android:layout_marginRight="2dp"
-        android:background="#F1F1F1"
+        android:background="@color/white"
+        android:paddingTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvdecripTion"
+        app:layout_constraintTop_toBottomOf="@+id/tvSeeMore"
         app:layout_constraintVertical_bias="0.0">
 
-        <TextView
-            android:id="@+id/tvNameShop"
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cardViewComment"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="16dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:lineHeight="17sp"
-            android:text="TextView"
-            android:textColor="#9A9A9A"
-            android:textSize="14sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <TextView
-            android:id="@+id/tvCommentitem"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginLeft="16dp"
-            android:layout_marginTop="8dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginRight="16dp"
-            android:layout_marginBottom="16dp"
-            android:lineHeight="17sp"
-            android:text="TextView"
-            android:textColor="#1A1A1A"
-            android:textSize="14sp"
+            android:background="#F1F1F1"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/tvNameShop" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tvNameShop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:lineHeight="17sp"
+                android:text="TextView"
+                android:textColor="#9A9A9A"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/tvCommentitem"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginRight="16dp"
+                android:layout_marginBottom="16dp"
+                android:lineHeight="17sp"
+                android:text="TextView"
+                android:textColor="#1A1A1A"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvNameShop" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <TextView
+        android:id="@+id/tvSeeMore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/seemore"
+        android:lineHeight="18sp"
+        android:textColor="#1A1A1A"
+        android:textSize="14sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvdecripTion" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

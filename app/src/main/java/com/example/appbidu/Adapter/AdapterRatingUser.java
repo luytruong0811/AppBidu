@@ -9,19 +9,21 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RatingBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.borjabravo.readmoretextview.ReadMoreTextView;
+
 import com.example.appbidu.R;
 import com.example.appbidu.model.RatingShop;
 
 import java.util.List;
 
 import de.hdodenhof.circleimageview.CircleImageView;
+
 
 public class AdapterRatingUser extends RecyclerView.Adapter<AdapterRatingUser.RatingViewHodel> {
     private Context context;
@@ -65,6 +67,17 @@ public class AdapterRatingUser extends RecyclerView.Adapter<AdapterRatingUser.Ra
 
 
         holder.tvdescripTion.setText(ratingShop.getDescription());
+        holder.tvdescripTion.post(new Runnable() {
+            @Override
+            public void run() {
+                int lineCnt = holder.tvdescripTion.getLineCount();
+                if(lineCnt < 4) holder.tvseemore.setVisibility(View.GONE);
+                holder.tvseemore.setOnClickListener(v -> {
+                    holder.tvseemore.setVisibility(View.GONE);
+                    holder.tvdescripTion.setMaxLines(Integer.MAX_VALUE);
+                });
+            }
+        });
 
         if(ratingShop.getCommentClient()==null){
             holder.constraintLayout.setVisibility(View.GONE);
@@ -87,7 +100,7 @@ public class AdapterRatingUser extends RecyclerView.Adapter<AdapterRatingUser.Ra
         private TextView tvDateTime;
         private RatingBar ratingBar;
         private RecyclerView rvImage;
-        private TextView tvdescripTion;
+        private TextView tvdescripTion,tvseemore;
         private TextView tvNameShop;
         private TextView tvComment;
         private ConstraintLayout constraintLayout;
@@ -101,7 +114,8 @@ public class AdapterRatingUser extends RecyclerView.Adapter<AdapterRatingUser.Ra
             tvdescripTion = itemView.findViewById(R.id.tvdecripTion);
             tvNameShop = itemView.findViewById(R.id.tvNameShop);
             tvComment = itemView.findViewById(R.id.tvCommentitem);
-            constraintLayout = itemView.findViewById(R.id.cardViewComment);
+            tvseemore = itemView.findViewById(R.id.tvSeeMore);
+            constraintLayout = itemView.findViewById(R.id.cardViewComment1);
         }
     }
 

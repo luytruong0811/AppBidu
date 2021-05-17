@@ -34,7 +34,7 @@ public class ViewmodelRating extends ViewModel {
                 null,"Every spring I start going through dress withdrawals and go crazy over all the pretty spring dresses that come out haha. It’s like famine and then feast and dresses HAPPY SPRING! ",null,null,"Media"));
         mListRating.add(new RatingShop(3, R.drawable.anhuser3,"Kim*******",3,"06-04-2021 11:36",
                 getListImage(),"Every spring I start going through dress withdrawals and go crazy over all the pretty spring dresses that come","Angela Soraphiare Shop","Hi, thank you for feedback","Comment"));
-        mListRating.add(new RatingShop(4, R.drawable.anhuser2,"Kim Joong***",4,"06-04-2021 11:36",
+        mListRating.add(new RatingShop(4, R.drawable.anhuser2,"Kim Joong***",3,"06-04-2021 11:36",
                 null,"I am very satisfied with this product ",null,null,"Media"));
         mListRating.add(new RatingShop(5, R.drawable.anhuser5,"Kim Joong***",4,"06-04-2021 11:36",
                 null,"I am very satisfied with this product ",null,null,"Media"));
@@ -50,8 +50,12 @@ public class ViewmodelRating extends ViewModel {
                 null,"Every spring I start going through dress withdrawals and go crazy over all the pretty spring dresses that come out haha. It’s like famine and then feast and dresses HAPPY SPRING!\n",null,null,"Media"));
         mListRating.add(new RatingShop(11, R.drawable.anhuser3,"Kim*******",3,"06-04-2021 11:36",
                 getListImage(),"Every spring I start going through dress withdrawals and go crazy over all the pretty spring dresses that come","Angela Soraphiare Shop","Hi, thank you for feedback","Commnet"));
-        mListRating.add(new RatingShop(12, R.drawable.anhuser2,"Kim Joong***",4,"06-04-2021 11:36",
+        mListRating.add(new RatingShop(12, R.drawable.anhuser2,"Kim Joong***",3,"06-04-2021 11:36",
                 null,"I am very satisfied with this product ",null,null,"Media"));
+        mListRating.add(new RatingShop(13, R.drawable.anhuser3,"Kim*******",4,"06-04-2021 11:36",
+                getListImage(),"Every spring I start going through dress withdrawals and go crazy over all the pretty spring dresses that come","Angela Soraphiare Shop","Hi, thank you for feedback","Comment"));
+        mListRating.add(new RatingShop(7, R.drawable.anhuser3,"Kim*******",5,"06-04-2021 11:36",
+                getListImage(),"Every spring I start going through dress withdrawals and go crazy over all the pretty spring dresses that come","Angela Soraphiare Shop","Hi, thank you for feedback","Comment"));
 
         listRatingLiveData.setValue(mListRating);
     }
@@ -102,5 +106,39 @@ public class ViewmodelRating extends ViewModel {
             }
             listRatingLiveData.setValue(list);
         }
+    }
+
+    public void updateData2(String mCategory) {
+        if(mCategory.equals("All")) {
+            listRatingLiveData.setValue(mListRating);
+        }
+        else if(mCategory.equals("Comment")) {
+            List<RatingShop> list = new ArrayList<>();
+            for(int i=0; i<mListRating.size(); i++) {
+                if (mListRating.get(i).getImageProducts() == null) {
+                    list.add(mListRating.get(i));
+                }
+            }
+            listRatingLiveData.setValue(list);
+        }
+        else if(mCategory.equals("Media")) {
+            List<RatingShop> list = new ArrayList<>();
+            for(int i=0; i<mListRating.size(); i++) {
+                if (mListRating.get(i).getImageProducts() != null) {
+                    list.add(mListRating.get(i));
+                }
+            }
+            listRatingLiveData.setValue(list);
+        }
+    }
+
+    public void updateData3(Integer numberStar) {
+        List<RatingShop> list = new ArrayList<>();
+        for(int i=0; i<mListRating.size(); i++) {
+            if(mListRating.get(i).getRatingUser() == numberStar) {
+                list.add(mListRating.get(i));
+            }
+        }
+        listRatingLiveData.setValue(list);
     }
 }

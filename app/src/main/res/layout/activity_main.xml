@@ -191,8 +191,8 @@
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/rating5"
-            app:layout_constraintStart_toStartOf="@id/rating5"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rating5" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -236,8 +236,8 @@
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/rating4"
-            app:layout_constraintStart_toStartOf="@id/rating4"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rating4" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -279,8 +279,8 @@
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/rating3"
-            app:layout_constraintStart_toStartOf="@id/rating3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rating3" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -320,8 +320,8 @@
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/rating2"
-            app:layout_constraintStart_toStartOf="@id/rating2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rating2" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -365,8 +365,8 @@
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="@id/rating1"
-            app:layout_constraintStart_toStartOf="@id/rating1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@id/rating1" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 

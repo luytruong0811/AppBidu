@@ -167,9 +167,9 @@
 
         <com.example.appbidu.RatingBarVectorFix
             android:id="@+id/rating5"
-            style="@style/RatingBar"
+            android:progressDrawable="@drawable/ratingbar_full"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="8dp"
             android:layout_marginTop="8dp"
             android:isIndicator="true"
             android:layerType="software"
@@ -211,9 +211,9 @@
 
         <com.example.appbidu.RatingBarVectorFix
             android:id="@+id/rating4"
-            style="@style/RatingBar"
+            android:progressDrawable="@drawable/ratingbar_full"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="8dp"
             android:layout_marginTop="8dp"
             android:isIndicator="true"
             android:layerType="software"
@@ -255,9 +255,9 @@
 
         <com.example.appbidu.RatingBarVectorFix
             android:id="@+id/rating3"
-            style="@style/RatingBar"
+            android:progressDrawable="@drawable/ratingbar_full"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="8dp"
             android:layout_marginTop="8dp"
             android:isIndicator="true"
             android:layerType="software"
@@ -296,9 +296,9 @@
 
         <com.example.appbidu.RatingBarVectorFix
             android:id="@+id/rating2"
-            style="@style/RatingBar"
+            android:progressDrawable="@drawable/ratingbar_full"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="8dp"
             android:layout_marginTop="8dp"
             android:isIndicator="true"
             android:layerType="software"
@@ -341,9 +341,9 @@
 
         <com.example.appbidu.RatingBarVectorFix
             android:id="@+id/rating1"
-            style="@style/RatingBar"
+            android:progressDrawable="@drawable/ratingbar_full"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="8dp"
             android:layout_marginTop="8dp"
             android:isIndicator="true"
             android:layerType="software"

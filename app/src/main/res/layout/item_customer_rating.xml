@@ -25,10 +25,10 @@
     <com.example.appbidu.RatingBarVectorFix
         android:id="@+id/ratingUser"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        style="@style/RatingBarChaBa"
+        android:layout_height="10dp"
+        android:progressDrawable="@drawable/rating_full_chaba"
         android:isIndicator="true"
-        android:layout_marginTop="2dp"
+
         app:layout_constraintBottom_toBottomOf="@+id/circleImageView"
         app:layout_constraintStart_toStartOf="@+id/tvnameUser"
         app:layout_constraintTop_toBottomOf="@+id/tvnameUser" />

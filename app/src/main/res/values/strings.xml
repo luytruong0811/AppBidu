@@ -3,4 +3,19 @@
     <string name="seeless"><u>See less</u></string>
     <string name="seemore"><u>See more</u></string>
     <string name="textview"><u>TextView</u></string>
+    <string name="rating">Rating</string>
+    <string name="_4_2">4.2</string>
+    <string name="all">All\n(12)</string>
+    <string name="comment">Comment\n(7)</string>
+    <string name="media">Media\n(5)</string>
+    <string name="count">(2)</string>
+    <string name="count5">(2)</string>
+    <string name="count3">(2)</string>
+    <string name="count2">(2)</string>
+    <string name="count1">(2)</string>
+    <string name="gone">No rating yet</string>
+    <string name="tvdescription">TextView</string>
+    <string name="shopname">TextView</string>
+    <string name="itemComment">TextView</string>
+    <string name="center">+9</string>
 </resources>

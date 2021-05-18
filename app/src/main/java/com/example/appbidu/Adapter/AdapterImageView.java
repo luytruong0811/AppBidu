@@ -1,15 +1,9 @@
 package com.example.appbidu.Adapter;
 
-import android.app.Activity;
-import android.content.Context;
-import android.graphics.Point;
-import android.util.DisplayMetrics;
-import android.util.Log;
-import android.view.Display;
+import android.annotation.SuppressLint;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.view.WindowManager;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -22,7 +16,7 @@ import com.example.appbidu.model.ImageProduct;
 import java.util.List;
 
 public class AdapterImageView extends RecyclerView.Adapter<AdapterImageView.ImageViewhodel> {
-    private List<ImageProduct> listImagePR;
+    private final List<ImageProduct> listImagePR;
 
     public AdapterImageView(List<ImageProduct> listImagePR) {
         this.listImagePR = listImagePR;
@@ -37,6 +31,7 @@ public class AdapterImageView extends RecyclerView.Adapter<AdapterImageView.Imag
     }
 
 
+    @SuppressLint("SetTextI18n")
     @Override
     public void onBindViewHolder(@NonNull ImageViewhodel holder, int position) {
         ImageProduct imageProduct = listImagePR.get(position);
@@ -52,9 +47,9 @@ public class AdapterImageView extends RecyclerView.Adapter<AdapterImageView.Imag
         return 5;
     }
 
-    public class ImageViewhodel extends RecyclerView.ViewHolder {
-        private ImageView imageView;
-        private TextView tvMore;
+    public static class ImageViewhodel extends RecyclerView.ViewHolder {
+        private final ImageView imageView;
+        private final TextView tvMore;
         public ImageViewhodel(@NonNull View itemView) {
             super(itemView);
             imageView = itemView.findViewById(R.id.imageView);

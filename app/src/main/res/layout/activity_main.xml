@@ -38,7 +38,7 @@
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
                 app:srcCompat="@drawable/ic_path"
-                tools:ignore="VectorDrawableCompat" />
+                tools:ignore="ContentDescription,VectorDrawableCompat" />
 
             <TextView
                 android:id="@+id/textView"
@@ -48,13 +48,14 @@
                 android:layout_marginLeft="17dp"
                 android:fontFamily="@font/semibole"
                 android:lineHeight="22.5sp"
-                android:text="Rating"
+                android:text="@string/rating"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toEndOf="@+id/imageView"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="1.0" />
+                app:layout_constraintVertical_bias="1.0"
+                tools:ignore="UnusedAttribute" />
 
             <ImageView
                 android:id="@+id/ic_star"
@@ -65,7 +66,8 @@
                 android:src="@drawable/ic_star"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:ignore="ContentDescription" />
 
             <TextView
                 android:id="@+id/tvRating"
@@ -75,12 +77,13 @@
                 android:layout_marginRight="4dp"
                 android:fontFamily="@font/semibole"
                 android:lineHeight="16sp"
-                android:text="4.2"
+                android:text="@string/_4_2"
                 android:textColor="@color/black"
                 android:textSize="18sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toStartOf="@+id/ic_star"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:targetApi="p" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -100,13 +103,14 @@
         android:lineHeight="15sp"
         android:paddingTop="4dp"
         android:paddingBottom="4dp"
-        android:text="All\n(12)"
+        android:text="@string/all"
         android:textColor="@color/white"
         android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@+id/tvComment"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvComment" />
+        app:layout_constraintTop_toTopOf="@+id/tvComment"
+        tools:targetApi="p" />
 
     <TextView
         android:id="@+id/tvComment"
@@ -122,13 +126,14 @@
         android:lineHeight="15sp"
         android:paddingTop="4dp"
         android:paddingBottom="4dp"
-        android:text="Comment\n(7)"
+        android:text="@string/comment"
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintEnd_toStartOf="@+id/tvMedia"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tvALL"
-        app:layout_constraintTop_toTopOf="@+id/tvMedia" />
+        app:layout_constraintTop_toTopOf="@+id/tvMedia"
+        tools:targetApi="p" />
 
     <TextView
         android:id="@+id/tvMedia"
@@ -145,13 +150,14 @@
         android:lineHeight="15sp"
         android:paddingTop="4dp"
         android:paddingBottom="4dp"
-        android:text="Media\n(5)"
+        android:text="@string/media"
         android:textColor="@color/black"
         android:textSize="12sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/tvComment"
-        app:layout_constraintTop_toBottomOf="@+id/toolbar" />
+        app:layout_constraintTop_toBottomOf="@+id/toolbar"
+        tools:targetApi="p" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/boxStar4"
@@ -187,13 +193,14 @@
             android:layout_marginBottom="6dp"
             android:fontFamily="@font/lexend"
             android:lineHeight="15sp"
-            android:text="(2)"
+            android:text="@string/count"
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rating5" />
+            app:layout_constraintTop_toBottomOf="@id/rating5"
+            tools:targetApi="p" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -232,13 +239,14 @@
             android:layout_marginBottom="6dp"
             android:fontFamily="@font/lexend"
             android:lineHeight="15sp"
-            android:text="(2)"
+            android:text="@string/count3"
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rating4" />
+            app:layout_constraintTop_toBottomOf="@id/rating4"
+            tools:targetApi="p" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -275,13 +283,14 @@
             android:layout_marginBottom="6dp"
             android:fontFamily="@font/lexend"
             android:lineHeight="15sp"
-            android:text="(2)"
+            android:text="@string/count2"
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rating3" />
+            app:layout_constraintTop_toBottomOf="@id/rating3"
+            tools:targetApi="p" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -316,13 +325,14 @@
             android:layout_marginBottom="6dp"
             android:fontFamily="@font/lexend"
             android:lineHeight="15sp"
-            android:text="(2)"
+            android:text="@string/count1"
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rating2" />
+            app:layout_constraintTop_toBottomOf="@id/rating2"
+            tools:targetApi="p" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -361,19 +371,20 @@
             android:layout_marginBottom="6dp"
             android:fontFamily="@font/lexend"
             android:lineHeight="15sp"
-            android:text="(2)"
+            android:text="@string/count5"
             android:textColor="@color/black"
             android:textSize="12sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/rating1" />
+            app:layout_constraintTop_toBottomOf="@id/rating1"
+            tools:targetApi="p" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
     <LinearLayout
         android:id="@+id/linewidth"
         android:layout_width="0dp"
-        android:layout_height="1sp"
+        android:layout_height="1dp"
         android:layout_marginTop="16dp"
         android:background="#F1F1F1"
         android:orientation="horizontal"
@@ -391,7 +402,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/linewidth"
-        app:layout_constraintVertical_chainStyle="packed" />
+        app:layout_constraintVertical_chainStyle="packed"
+        tools:ignore="ContentDescription" />
 
     <TextView
         android:visibility="gone"
@@ -399,7 +411,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="No rating yet "
+        android:text="@string/gone"
         android:textSize="14sp"
         android:lineHeight="17.5sp"
         android:fontFamily="@font/lexend"
@@ -407,7 +419,8 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="@+id/imageViewStar"
         app:layout_constraintStart_toStartOf="@+id/imageViewStar"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewStar" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewStar"
+        tools:targetApi="p" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvRatingShop"

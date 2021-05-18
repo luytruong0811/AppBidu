@@ -20,7 +20,8 @@
         android:textSize="12sp"
         app:layout_constraintBottom_toBottomOf="@+id/tvnameUser"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/tvnameUser" />
+        app:layout_constraintTop_toTopOf="@+id/tvnameUser"
+        tools:targetApi="p" />
 
     <com.example.appbidu.RatingBarVectorFix
         android:id="@+id/ratingUser"
@@ -76,13 +77,14 @@
         android:fontFamily="@font/lexend"
         android:lineHeight="18sp"
         android:paddingTop="12dp"
-        android:text="TextView"
+        android:text="@string/tvdescription"
         android:maxLines="4"
         android:textColor="#1A1A1A"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/circleImageView"
-        app:layout_constraintTop_toBottomOf="@+id/rvListImage" />
+        app:layout_constraintTop_toBottomOf="@+id/rvListImage"
+        tools:targetApi="p" />
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/cardViewComment1"
@@ -120,12 +122,13 @@
                 android:layout_marginEnd="16dp"
                 android:layout_marginRight="16dp"
                 android:lineHeight="17sp"
-                android:text="TextView"
+                android:text="@string/shopname"
                 android:textColor="#9A9A9A"
                 android:textSize="14sp"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:targetApi="p" />
 
             <TextView
                 android:id="@+id/tvCommentitem"
@@ -138,13 +141,14 @@
                 android:layout_marginRight="16dp"
                 android:layout_marginBottom="16dp"
                 android:lineHeight="17sp"
-                android:text="TextView"
+                android:text="@string/itemComment"
                 android:textColor="#1A1A1A"
                 android:textSize="14sp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@+id/tvNameShop" />
+                app:layout_constraintTop_toBottomOf="@+id/tvNameShop"
+                tools:targetApi="p" />
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.constraintlayout.widget.ConstraintLayout>
 
@@ -157,6 +161,7 @@
         android:textColor="#1A1A1A"
         android:textSize="14sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tvdecripTion" />
+        app:layout_constraintTop_toBottomOf="@+id/tvdecripTion"
+        tools:targetApi="p" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

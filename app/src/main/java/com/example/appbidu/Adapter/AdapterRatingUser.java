@@ -1,15 +1,11 @@
 package com.example.appbidu.Adapter;
 
-import android.app.Activity;
 import android.content.Context;
-import android.text.SpannableString;
-import android.text.style.UnderlineSpan;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.RatingBar;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.constraintlayout.widget.ConstraintLayout;
@@ -26,7 +22,7 @@ import de.hdodenhof.circleimageview.CircleImageView;
 
 
 public class AdapterRatingUser extends RecyclerView.Adapter<AdapterRatingUser.RatingViewHodel> {
-    private Context context;
+    private final Context context;
 
     private List<RatingShop> listRatingShop;
 
@@ -67,16 +63,13 @@ public class AdapterRatingUser extends RecyclerView.Adapter<AdapterRatingUser.Ra
 
 
         holder.tvdescripTion.setText(ratingShop.getDescription());
-        holder.tvdescripTion.post(new Runnable() {
-            @Override
-            public void run() {
-                int lineCnt = holder.tvdescripTion.getLineCount();
-                if(lineCnt < 4) holder.tvseemore.setVisibility(View.GONE);
-                holder.tvseemore.setOnClickListener(v -> {
-                    holder.tvseemore.setVisibility(View.GONE);
-                    holder.tvdescripTion.setMaxLines(Integer.MAX_VALUE);
-                });
-            }
+        holder.tvdescripTion.post(() -> {
+            int lineCnt = holder.tvdescripTion.getLineCount();
+            if(lineCnt < 4) holder.tvseemore.setVisibility(View.GONE);
+            holder.tvseemore.setOnClickListener(v -> {
+                holder.tvseemore.setVisibility(View.GONE);
+                holder.tvdescripTion.setMaxLines(Integer.MAX_VALUE);
+            });
         });
 
         if(ratingShop.getCommentClient()==null){
@@ -94,16 +87,17 @@ public class AdapterRatingUser extends RecyclerView.Adapter<AdapterRatingUser.Ra
         return listRatingShop.size();
     }
 
-    public class RatingViewHodel extends RecyclerView.ViewHolder {
-        private CircleImageView imageViewUser;
-        private TextView tvNameUser;
-        private TextView tvDateTime;
-        private RatingBar ratingBar;
-        private RecyclerView rvImage;
-        private TextView tvdescripTion,tvseemore;
-        private TextView tvNameShop;
-        private TextView tvComment;
-        private ConstraintLayout constraintLayout;
+    public static class RatingViewHodel extends RecyclerView.ViewHolder {
+        private final CircleImageView imageViewUser;
+        private final TextView tvNameUser;
+        private final TextView tvDateTime;
+        private final RatingBar ratingBar;
+        private final RecyclerView rvImage;
+        private final TextView tvdescripTion;
+        private final TextView tvseemore;
+        private final TextView tvNameShop;
+        private final TextView tvComment;
+        private final ConstraintLayout constraintLayout;
         public RatingViewHodel(@NonNull View itemView) {
             super(itemView);
             imageViewUser = itemView.findViewById(R.id.circleImageView);
